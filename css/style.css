@@ -1,0 +1,47 @@
+main {/**/
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/f1.png");
+    display: flexbox;
+    flex-grow: 1;
+    padding: 0px;
+}
+
+header {
+    background-color: #ffffff;
+    color: #311313;
+    padding: 0.2px;
+    text-align: center;
+    margin: 0.2%;
+    border-color: #333;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 20px;
+}
+
+
+form{
+    margin-bottom: 1%;
+    background-color:#000000;
+}
+section {
+    padding: 40px;
+}
+
+footer {
+    background-color: #b9b9b9;
+    color: #000000;
+    text-align: center;
+    padding: 20px;
+    align-items: center;
+    
+}
+

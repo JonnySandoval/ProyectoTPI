@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!--Link de tailwind css
+    inicia seccion estilos-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css">
+  <!--scrip para estilo con tailwind-->
+
+  <script src="https://kit.fontawesome.com/a23e6feb03.js"></script>
+  <!--Fin sección estilos-->
+  <title>PRINCIPAL PIZZA BITE</title>
+</head>
+
+<body>
+  <!--Inicio de cabecera-->
+  <nav class="bg-white py-0.1">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="relative flex items-center justify-between h-16">
+        <!--logo ylema-->
+        <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+          <button id="sidebarBtn" class="px-4 py-2 text-gray-700 text-2xl rounded-lg hover:bg-gray-200">
+            <i class="fas fa-bars"></i>
+          </button>
+          <img class="h-14 w-14 rounded-full" src="img/T1.png" alt="">
+
+          <nav class="space-px-2">
+            <h1 class="text-3xl text-black font-bold">TU PIZZA A UN CLIC</h1>
+          </nav>
+          <!--Logo y lema-->
+
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+
+          <div class="ml-3 relative">
+            <div>
+              <button class="text-xl text-gray-800 px-4 py-2 focus:outline-none" id="notificationsBtn"><i
+                  class="far fa-bell"></i></button>
+            </div>
+
+            <div id="notificationsDiv" class="hidden origin-top-right absolute right-0 mt-2 w-64
+                  rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5
+                  focus:outline-none">
+              <p class="p-2 text-sm text-gray-700">Not results...</p>
+            </div>
+          </div>
+
+          <!--Notificaciones y color-->
+          <div class="ml-3 relative">
+            <div>
+              <button class="text-xl text-gray-800 pr-4 py-2 focus:outline-none" id="colorsBtn"><i
+                  class="fas fa-palette"></i></button>
+            </div>
+            <div id="colorsDiv" class="hidden origin-top-right absolute right-0  w-20
+                rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5
+                focus:outline-none z-10">
+              <p class="p-2 text-sm text-gray-700">Colors:</p>
+              <div class="py-2">
+                <button class="bg-blue-500 w-12 h-8 rounded block mx-auto my-1"
+                  onclick="setColor('bg-blue-500')"></button>
+                <button class="bg-indigo-500 w-12 h-8 rounded block mx-auto my-1"
+                  onclick="setColor('bg-indigo-500')"></button>
+                <button class="bg-green-500 w-12 h-8 rounded block mx-auto my-1"
+                  onclick="setColor('bg-green-500')"></button>
+                <button class="bg-red-500 w-12 h-8 rounded block mx-auto my-1"
+                  onclick="setColor('bg-red-500')"></button>
+                <button class="bg-gray-800 w-12 h-8 rounded block mx-auto my-1"
+                  onclick="setColor('bg-gray-800')"></button>
+              </div><!--Notificaciones y color-->
+            </div>
+            </span>
+
+            <div class="ml-3 relative">
+
+              <div>
+                <!--Activa el boton menú-->
+                <div class="bg-gray-800 flex text-sm rounded-full focus:outline-none
+                focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="profileBtn">
+                  <span class="sr-only">Open user menu</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--Fin de encabezado-->
+
+  <!--principal-->
+  <main class="flex bg-gray-100">
+    <aside>
+      <div class="p-6">
+        <a href="#" class="text-white text-3xl font-semibold hover: text-gray-300">
+          <i class="fas fas-user-cog mr-3"></i>
+        </a>
+      </div>
+      <nav class="text-white text-base font-semibold pt-3">
+        <a href="main.html" class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
+          <i class="fas fa-book alt mr-3"></i>
+          Inicio
+        </a>
+        <a href="" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+          <i class="fas fa-user  mr-3"></i>
+          Usuario
+        </a>
+        <a href="menu.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+          <i class="fas fa-book-open mr-3"></i>
+          Menú
+        </a>
+        <a href="" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+          <i class="fas fa-cogs mr-3"></i>
+          Configuración
+        </a>
+      </nav>
+    </aside>
+
+    <!--Dropdown-->
+    <div class="w-full flex flex-col h-screen overflow-y-hidden">
+      <header id="sidebarMobile" class="w-full py-5 px-6 sm:hidden">
+        <nav class="text-white text-base font-semibold">
+          <a href="" class="flex items-center active-nav-link text-white py-4 pl-6 nav-item">
+            <i class="fas fa-book alt mr-3"></i>
+            Inicio
+          </a>
+          <a href="" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+            <i class="fas fa-user  mr-3"></i>
+            Usuario
+          </a>
+          <a href="menu.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+            <i class="fas fa-book-open mr-3"></i>
+            Menú
+          </a>
+          <a href="" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item">
+            <i class="fas fa-cogs mr-3"></i>
+            Configuración
+          </a>
+        </nav>
+      </header>
+
+      <div>
+        <h1 class="text-4xl font-bold">Bienvenido a Pizza</h1>
+        <h1 class="text-4xl font-bold p-">Bite</h1>
+      </div>
+      <section class="container mt-2 px-0">
+        <img src="img/banner1.png" alt="baneer" width="1010px">
+      </section>
+  </main>
+
+  <script src="componets/main.js"></script>
+  <footer class="bg-gray-100 p-1 mt-1">
+    <div class="container mx-auto ">
+      <p><img src="Img/red.png" alt="icono" height="10px" width="200px"> © 2023 Pizza Bite El Salvador, Todos los
+        derechos reservados</p>
+    </div>
+  </footer>
+</body>
+
+</html>

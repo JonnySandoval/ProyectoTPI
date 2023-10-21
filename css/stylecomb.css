@@ -1,0 +1,14 @@
+header {
+ border-width: 1px;
+ border-style: solid;
+ border-color: #000000;
+
+}
+
+footer {
+    background-color: #b9b9b9;
+    color: #000000;
+    text-align: center;
+    padding: 20px;
+    align-items: center;
+}
