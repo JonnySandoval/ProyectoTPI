@@ -12,3 +12,17 @@ footer {
     padding: 20px;
     align-items: center;
 }
+.login{
+    
+    padding: 50px;
+    margin: 0 auto;
+    align-items: center;
+
+}
+
+.login form{
+
+	width: 400px;
+    height: 300px;
+
+}
